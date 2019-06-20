@@ -1,7 +1,8 @@
 {
-  "name": "PW_Gateway",
+  "name": "pw_gateway",
   "version": "1.0.0",
   "dependencies": {
+    "mqtt": "^3.0.0",
     "serialport": "^7.1.5"
   }
 }
