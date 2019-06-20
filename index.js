@@ -1,5 +1,3 @@
-const serialport = require('serialport');// include the library
-const SerialPort = require('@serialport/stream');
 const serialportLibEvents = require('./lib/serialport-library-events/serial-events');
 const config = require('./lib/config/init-config');
 
