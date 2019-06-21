@@ -8,7 +8,7 @@ let mqttClient;
 
 // find USB serial port
 initConfig.serial.getPortName()
-    // configure serial port
+// configure serial port
     .then((port) => {
         console.log('Port ' + port + ' selected...');
         const serialOptions = {baudRate: 9600, dataBits: 8, stopBits: 2, parity: 'odd', autoOpen: false};
@@ -16,8 +16,11 @@ initConfig.serial.getPortName()
     })
     // MQTT INIT
     .then(() => {
-        const brokerURL = 'mqtt://test.mosquitto.org';
-        const options = {};
+        const brokerURL = 'mqtt://192.168.101.122';
+        const options = {
+            username: 'gateway',
+            password: 'gateway'
+        };
         mqttClient = initConfig.MQTT.connect(brokerURL, options);
     })
     // start serial port events listeners
