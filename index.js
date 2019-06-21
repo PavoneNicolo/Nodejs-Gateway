@@ -17,6 +17,7 @@ initConfig.serial.getPortName()
     // MQTT INIT
     .then(() => {
         const brokerURL = 'mqtt://192.168.101.122';
+        //const brokerURL = 'mqtt://127.0.0.1'; TODO da usare quando il codice è caricato nel raspberry
         const options = {
             username: 'gateway',
             password: 'gateway'
