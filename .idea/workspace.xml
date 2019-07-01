@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c24312fd-f4f2-4f59-ac4c-6fc739e980dd" name="Default Changelist" comment="">
+    <list default="true" id="c24312fd-f4f2-4f59-ac4c-6fc739e980dd" name="Default Changelist" comment="Aggiunta init per MQTT.&#10;Nell'index ordinata per priorità init seriale/MQTT.">
+      <change afterPath="$PROJECT_DIR$/services/serial/serial-data-process.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config/init-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/init-config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/services/serial-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/services/serial-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/queue-consumer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/config/init-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/init-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/services/serial-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/serial/serial-service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,29 +20,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/services/serial-service.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="82" selection-start-line="10" selection-start-column="82" selection-end-line="10" selection-end-column="82" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/config/init-config.js">
+        <entry file="file://$PROJECT_DIR$/queue-consumer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="30" column="50" lean-forward="true" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
+            <state relative-caret-position="65">
+              <caret line="50" column="7" lean-forward="true" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/services/serial/serial-data-process.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="186" selection-start-line="2" selection-start-column="186" selection-end-line="2" selection-end-column="186" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/services/serial/serial-service.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="171" selection-start-line="18" selection-start-column="171" selection-end-line="18" selection-end-column="171" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/init-config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="57" column="34" lean-forward="true" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -60,9 +70,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/index.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/lib/services/serial-service.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/lib/config/init-config.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/config/init-config.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/queue-consumer.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/services/serial/serial-data-process.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/services/serial/serial-service.js" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -75,16 +86,22 @@
         <option value="$PROJECT_DIR$/lib/events-handler/MQTT-service.js" />
         <option value="$PROJECT_DIR$/lib/services/MQTT-service.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/lib/services/serial-service.js" />
         <option value="$PROJECT_DIR$/lib/config/init-config.js" />
         <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/lib/services/serial-service.js" />
+        <option value="$PROJECT_DIR$/serial-receiver.js" />
+        <option value="$PROJECT_DIR$/lib/services/serial/serial-service.js" />
+        <option value="$PROJECT_DIR$/config/init-config.js" />
+        <option value="$PROJECT_DIR$/services/serial/serial-service.js" />
+        <option value="$PROJECT_DIR$/services/serial/serial-data-process.js" />
+        <option value="$PROJECT_DIR$/queue-consumer.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="width" value="980" />
-    <option name="height" value="1040" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -92,45 +109,47 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="PW_Gateway" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PW_Gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="Nodejs_Gateway" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Nodejs_Gateway" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="PW_Gateway" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PW_Gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PW_Gateway" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PW_Gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PW_Gateway" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PW_Gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="Nodejs_Gateway" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Nodejs_Gateway" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Nodejs_Gateway" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Nodejs_Gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="serial" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.3.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.1.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Nick\Desktop\Nodejs_Gateway" />
+      <recent name="C:\Users\Nick\Desktop\Nodejs_Gateway\lib\services\serial" />
+      <recent name="C:\Users\Nick\Desktop\Nodejs_Gateway\lib\services" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -160,6 +179,7 @@
       <workItem from="1560978019061" duration="52000" />
       <workItem from="1561014471439" duration="18171000" />
       <workItem from="1561100288407" duration="6823000" />
+      <workItem from="1562001167252" duration="7751000" />
     </task>
     <task id="LOCAL-00001" summary="Ricevo i messaggi correttamente sulla seriale">
       <created>1561023500523</created>
@@ -186,25 +206,24 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30364000" />
+    <option name="totallyTimeSpent" value="38115000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18663137" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18651211" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27735645" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3252841" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32502708" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.3286119" />
@@ -222,100 +241,65 @@
     <option name="LAST_COMMIT_MESSAGE" value="Aggiunta init per MQTT.&#10;Nell'index ordinata per priorità init seriale/MQTT." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/debug/dist/debug.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="429" column="6" selection-start-line="429" selection-start-column="6" selection-end-line="429" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/readable-stream/lib/_stream_readable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-54">
-          <caret line="739" column="39" lean-forward="true" selection-start-line="739" selection-start-column="39" selection-end-line="739" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/serialport/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" selection-start-column="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/debug/dist/debug.js" />
+    <entry file="file://$PROJECT_DIR$/node_modules/readable-stream/lib/_stream_readable.js" />
+    <entry file="file://$PROJECT_DIR$/package-lock.json" />
+    <entry file="file://$PROJECT_DIR$/node_modules/serialport/test.js" />
     <entry file="file://$PROJECT_DIR$/listport.js" />
-    <entry file="file://$PROJECT_DIR$/node_modules/serialport/lib/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@serialport/stream/stream.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9885">
-          <caret line="668" selection-start-line="668" selection-end-line="668" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/serialport/lib/index.js" />
+    <entry file="file://$PROJECT_DIR$/node_modules/@serialport/stream/stream.js" />
     <entry file="file://$PROJECT_DIR$/lib/config/MQTT-config.js" />
     <entry file="file://$PROJECT_DIR$/lib/services/MQTT-service.js" />
-    <entry file="file://$PROJECT_DIR$/node_modules/mqtt/types/lib/connect/index.d.ts">
+    <entry file="file://$PROJECT_DIR$/node_modules/mqtt/types/lib/connect/index.d.ts" />
+    <entry file="file://$PROJECT_DIR$/node_modules/node-input-validator/index.js" />
+    <entry file="file://$PROJECT_DIR$/node_modules/validator/index.js" />
+    <entry file="file://$PROJECT_DIR$/node_modules/readline/readline.js" />
+    <entry file="file://$PROJECT_DIR$/node_modules/mqtt/types/lib/client.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/node-input-validator/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-391">
-          <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/validator/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="242" selection-start-line="242" selection-end-line="242" />
+        <state relative-caret-position="199">
+          <caret line="102" column="9" selection-start-line="102" selection-start-column="9" selection-end-line="102" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+        <state relative-caret-position="119">
+          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/readline/readline.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/events/events.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+        <state relative-caret-position="199">
+          <caret line="224" selection-start-line="224" selection-end-line="224" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
+    <entry file="file://$PROJECT_DIR$/services/serial/serial-data-process.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
+        <state relative-caret-position="34">
+          <caret line="2" column="186" selection-start-line="2" selection-start-column="186" selection-end-line="2" selection-end-column="186" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/services/serial-service.js">
+    <entry file="file://$PROJECT_DIR$/services/serial/serial-service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="82" selection-start-line="10" selection-start-column="82" selection-end-line="10" selection-end-column="82" />
+        <state relative-caret-position="306">
+          <caret line="18" column="171" selection-start-line="18" selection-start-column="171" selection-end-line="18" selection-end-column="171" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/config/init-config.js">
+    <entry file="file://$PROJECT_DIR$/config/init-config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="30" column="50" lean-forward="true" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
+        <state relative-caret-position="408">
+          <caret line="57" column="34" lean-forward="true" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/queue-consumer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="50" column="7" lean-forward="true" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
         </state>
       </provider>
     </entry>

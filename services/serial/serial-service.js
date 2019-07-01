@@ -1,3 +1,6 @@
+const events = require('events');
+const eventEmitter = new events.EventEmitter();
+
 module.exports = {
     open: (port) => {
         port.open(() => {
@@ -6,17 +9,19 @@ module.exports = {
         });
     },
 
-    //
     send: (port, message) => {
-
-        // quando mi arriva un comando via MQTT devo rigirarlo in seriale al device
+        // quando invio comandi in seriale, questa funzione
+        port.write(message);
     },
 
-    receive: (port, mqttClient) => {
+    receive: (port) => {
         port.on('data', (data) => {
-            // ricevo in seriale dati di ACK comando/accoppiamento e dati dei sensori
-            // mando i dati via MQTT in cloud su un db
-            // mqttClient.publish('topic', 'messaggio');
+            // metto su una coda il dato che il consumer provvederà ad elaborare (serial-data-process) --- in caso di discovery mode scrivo prima 255 poi la configurazione
+            if (data != 255) {
+                eventEmitter.emit('enablePolling');
+            } else {
+                eventEmitter.emit('discoveryMode', 2);
+            }
             console.log(data.toString());
         });
     },
